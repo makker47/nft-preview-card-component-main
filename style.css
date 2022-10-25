@@ -1,0 +1,235 @@
+:root {
+
+    /* ----------------Primary----------------- */
+
+    --Soft-blue: hsl(215, 51%, 70%);
+    --Cyan-main-img: hsl(178, 100%, 50%, 50%);
+    --Cyan: hsl(178, 100%, 50%);
+
+    /* -----------------------Neutral------------------ */
+
+    /* (main BG) */
+    --Very-dark-main: hsl(217, 54%, 11%);
+
+    /* (card BG) */
+    --Very-dark-card: hsl(216, 50%, 16%);
+
+    /* (line) */
+    --Very-dark-line: hsl(215, 32%, 27%);
+
+    --White: hsl(0, 0%, 100%);
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Outfit', sans-serif;
+}
+
+body {
+
+    display: grid;
+    place-items: center;
+    min-height: 100vh;
+    background-color: var(--Very-dark-main);
+}
+
+.card {
+
+    margin: 20px;
+    padding: 20px;
+    max-width: 375px;
+    background-color: var(--Very-dark-card);
+    border-radius: 20px;
+    box-shadow: 10px 10px 4px -4px rgba(0, 0, 0, 0.28);
+
+
+}
+
+/* ----img---- */
+
+.equilibrium {
+    width: 100%;
+    border-radius: 20px;
+    height: 100%;
+}
+
+.main-img {
+    position: relative;
+    height: 335px;
+
+
+}
+
+
+.main-img div {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background-color: var(--Cyan-main-img);
+    top: 0;
+    border-radius: 20px;
+    opacity: 0;
+    transition: 1s;
+
+}
+
+
+.main-img div img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+
+
+}
+
+.main-img div:hover {
+    opacity: 1;
+    cursor: pointer;
+    transition-delay: ease-in-out 1s;
+    -webkit-box-shadow: 5px 5px 5px 0px #000000,
+        inset 4px 4px 15px 0px #000000,
+        5px 5px 15px 5px rgba(0, 0, 0, 0);
+    box-shadow: 5px 5px 5px 0px #000000,
+        inset 4px 4px 15px 0px #000000,
+        5px 5px 15px 5px rgba(0, 0, 0, 0);
+
+}
+
+/* ----text------ */
+
+.text {
+    margin-top: 20px;
+
+}
+
+a {
+    all: unset;
+    color: var(--White);
+    font-size: 1.3rem;
+    cursor: pointer;
+    position: relative;
+    
+    animation: glow 2s ease-in-out infinite
+
+}
+
+
+
+a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 2px;
+    background-color: var(--White);
+    transform-origin: right;
+    transform: scale(0);
+    transition: transform 550ms ease-in-out;
+}
+
+a:hover{
+    color: var(--Cyan);
+    
+    
+}
+
+a:hover::after {
+    transform: scale(1);
+    color: var(--Cyan);
+    transform-origin: left;
+
+}
+
+
+
+.text p {
+    margin-top: 1.25rem;
+    color: var(--Soft-blue);
+}
+
+
+/* after text section */
+
+.points {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 1.25rem;
+
+}
+
+.points div {
+    display: flex;
+}
+
+.points img {
+    margin-right: 10px;
+}
+
+.points div:nth-child(1) {
+    color: var(--Cyan)
+}
+
+.points div:nth-child(2) {
+    color: var(--Soft-blue);
+}
+
+
+/* --------------line------------- */
+
+.line {
+    border-top: 1px solid;
+    margin-top: 1.25rem;
+    color: var(--Soft-blue);
+    opacity: 0.2;
+}
+
+/* -------Avatar------- */
+
+.avatar {
+    display: flex;
+    align-items: center;
+    margin-top: 1.25rem;
+}
+
+.avatar p {
+    color: var(--Soft-blue);
+    margin-left: 1.25rem;
+}
+
+.avatar-img {
+    height: 50px;
+    border-style: solid;
+    border-radius: 100%;
+    border-color: white;
+    border-width: 1px;
+
+}
+
+.avatar a {
+    font-size: 1rem;
+}
+
+
+
+
+
+
+
+
+.attribution {
+    margin-top: auto;
+    display: flex;
+    font-size: 11px;
+    text-align: center;
+    color: var(--Soft-blue);
+    
+}
+
+
+  
+  
